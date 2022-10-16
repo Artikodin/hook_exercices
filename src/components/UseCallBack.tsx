@@ -3,7 +3,7 @@ import RadioButton from "./RadioButton";
 
 const UseCallBack = () => {
   const [selectedValue, setSelectedValue] = useState<string | null>(null);
-  const radioButtons = [...Array(10000)];
+  const radioButtons = [...Array(10)];
 
   return (
     <div className="radio-list">
@@ -11,15 +11,16 @@ const UseCallBack = () => {
         const value = `radio${id}`;
         const isChecked = selectedValue === value;
 
+        const handleChange = (value: string) => {
+          setSelectedValue(value);
+        };
+
         return (
           <RadioButton
             key={id}
             value={value}
-            id={`${id}`}
             checked={isChecked}
-            onChange={(value) => {
-              setSelectedValue(value);
-            }}
+            onChange={handleChange}
           />
         );
       })}

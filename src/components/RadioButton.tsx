@@ -1,13 +1,15 @@
+import { useId } from "react";
 import "./RadioButton.css";
 
 type Props = {
   value: string;
-  id: string;
   checked?: boolean;
   onChange: (value: string) => void;
 };
 
-const RadioButton = ({ value, id, checked, onChange }: Props) => {
+const RadioButton = ({ value, checked, onChange }: Props) => {
+  const id = useId();
+
   return (
     <div className={`radio ${checked && "radio-active"}`}>
       <input
@@ -22,5 +24,7 @@ const RadioButton = ({ value, id, checked, onChange }: Props) => {
     </div>
   );
 };
+
+RadioButton.displayName = "RadioButton";
 
 export default RadioButton;
