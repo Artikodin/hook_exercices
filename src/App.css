@@ -1,0 +1,9 @@
+.radio-list {
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  width: min(90%, 400px);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

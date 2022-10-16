@@ -1,0 +1,23 @@
+.radio {
+  border: 1px solid black;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radio-active {
+  background-color: green;
+  font-weight: 600;
+  color: white;
+}
+
+.radio > label {
+  margin: -8px -16px -8px 0;
+  flex: 1 1 0;
+  cursor: pointer;
+}
+
+.radio > input {
+  cursor: pointer;
+}
